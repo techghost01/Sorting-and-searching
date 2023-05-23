@@ -1,0 +1,29 @@
+Insertion sort is a simple sorting algorithm that works the way we sort playing cards in our hands. Each time we take a new card we put it in the right place in our hand. 
+Instructions
+Each time work only with the first i-1 element from of the array
+Pick element arr[i] and insert it into sorted sequence in the array from 0 to i-1.
+
+
+procedure insertionSort( A : array of items )
+   int holePosition
+   int valueToInsert
+
+   for i = 1 to length(A) inclusive do:
+
+       select value to be inserted /
+      valueToInsert = A[i]
+      holePosition = i
+
+      /locate hole position for the element to be inserted /
+
+      while holePosition > 0 and A[holePosition-1] > valueToInsert do:
+         A[holePosition] = A[holePosition-1]
+         holePosition = holePosition -1
+      end while
+
+      / insert the number at hole position 
+      A[holePosition] = valueToInsert
+
+   end for
+
+end procedure
